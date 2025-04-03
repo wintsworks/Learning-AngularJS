@@ -1,24 +1,33 @@
 <!doctype html>
 <html ng-app="myApp">
     <head>
+        <!-- Styles -->
         <link rel="stylesheet" href="styles/main.css" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Meta data -->
         <meta name="author" content="Darren Griffitt" />
         <meta name="description" content="AngularJS Hello World Application" />
         <meta name="keywords" content="AngularJS, Hello World, Legacy" />
 
-        <script src="angular.min.jsm.js"></script>
+        <!-- Angular Framework Scripts -->
+        <script src="./framework/angular.min.jsm.js"></script>
+        <script src="./framework/angular-route.min.jsm.js"></script>
+
+        <!-- Application Scripts -->
         <script src="app.js"></script>
+        <script src="./routes/router.js"></script>
         <script src="dataService.js"></script>
         <script src="controllers.js"></script>
-        <title>AngularJS Hello World</title>
+        <script src="animations.js"></script>
+
+        <title>Test Application</title>
     </head>
     <body>
         <div class="controllerContainer" ng-controller="myController">
-            <h1>{{ message }}</h1>
-            <input type="text" ng-model="message" />
+            <h1 id="headerMessage">{{ message }}</h1>
+            <input id="customInput" type="text" ng-model="message" />
         </div>
 
         <div class="controllerContainer" ng-controller="listsController">

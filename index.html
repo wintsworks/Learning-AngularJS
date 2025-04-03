@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <link rel="stylesheet" href="styles/main.css" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="author" content="Darren Griffitt" />
+        <meta name="description" content="AngularJS Hello World Application" />
+        <meta name="keywords" content="AngularJS, Hello World, Legacy" />
+
+        <script src="angular.min.jsm.js"></script>
+        <script src="app.js"></script>
+        <script src="dataService.js"></script>
+        <script src="controllers.js"></script>
+        <title>AngularJS Hello World</title>
+    </head>
+    <body>
+        <div class="controllerContainer" ng-controller="myController">
+            <h1>{{ message }}</h1>
+            <input type="text" ng-model="message" />
+        </div>
+
+        <div class="controllerContainer" ng-controller="listsController">
+            <ul>
+                <li ng-repeat="item in items">
+                    {{ item.name }} is ${{ item.price | number:2 || 'N/A' }}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

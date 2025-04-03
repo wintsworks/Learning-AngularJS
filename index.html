@@ -24,7 +24,8 @@
         <div class="controllerContainer" ng-controller="listsController">
             <ul>
                 <li ng-repeat="item in items">
-                    {{ item.name }} is ${{ item.price | number:2 || 'N/A' }}
+                    {{ item.name }} is &dollar;{{ item.price | number:2 || 'N/A'
+                    }}
                 </li>
             </ul>
         </div>
